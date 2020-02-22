@@ -19,7 +19,7 @@ const getModa = (...numbers) => {
     let numerator = 0;
     let max = 0;
     let result;
-    let sortNumbers = numbers.sort();
+    const sortNumbers = numbers.sort();
     for (i = 0; i < sortNumbers.length; i++) {
       if (sortNumbers[i] === sortNumbers[i + 1]) {
         numerator++;
@@ -41,16 +41,15 @@ const getModa = (...numbers) => {
   // Task #3
 
 const getAverage = (...numbers) => {
-    let average = numbers.reduce((accumulator, element) => {
+    const average = numbers.reduce((accumulator, element) => {
+        let sum = 0;
       if (Number.isInteger(element)) {
-        return accumulator + element;
-      } else {
-        return accumulator;
+          sum +=element;
       }
-    }, 0);
+        return sum + accumulator;
+      },0);
     return average / numbers.length;
-  };
-  
+  }
   console.log(getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
   
 
