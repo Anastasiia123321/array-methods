@@ -40,15 +40,16 @@ const getModa = (...numbers) => {
 
   // Task #3
 
-const getAverage = (...numbers) => {
-    const average = numbers.reduce((accumulator, element) => {
+function getAverage(...numbers) {
+    const data = getEntireNumbers(numbers);
+    const result = data.reduce((accumulator, element) => {
         let sum = 0;
       if (Number.isInteger(element)) {
           sum +=element;
       }
         return sum + accumulator;
       },0);
-    return average / numbers.length;
+    return result / numbers.length;
   }
   console.log(getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
   
