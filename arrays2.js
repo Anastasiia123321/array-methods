@@ -40,12 +40,8 @@ const getModa = (...numbers) => {
 
   // Task #3
 
-const getEntireNumbers = (numbers) => {
-return numbers.filter(el => el === Math.trunc(el));
-    };
-
 function getAverage(...numbers) {
-    const data = getEntireNumbers(numbers);
+    const data = numbers.filter(num =>Number.isInteger(num));
     const result = data.reduce((accumulator, element) => {
         let sum = 0;
       if (Number.isInteger(element)) {
