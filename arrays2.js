@@ -41,6 +41,9 @@ const getModa = (...numbers) => {
   // Task #3
 
 function getAverage(...numbers) {
+    const getEntireNumbers = (numbers) => {
+return numbers.filter(el => el === Math.trunc(el));
+    }
     const data = getEntireNumbers(numbers);
     const result = data.reduce((accumulator, element) => {
         let sum = 0;
