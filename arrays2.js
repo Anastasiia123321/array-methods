@@ -39,7 +39,11 @@ const getModa = (...numbers) => {
 
 
   // Task #3
-
+const getAverage = (...numbers) => {
+    const data = numbers.filter(num => Number.isInteger(num));
+    const result = data.reduce((sum, current) => sum + current, 0);
+    return result / data.length;
+}
 function getAverage(...numbers) {
     const data = numbers.filter(num =>Number.isInteger(num));
     const result = data.reduce((accumulator, element) => {
