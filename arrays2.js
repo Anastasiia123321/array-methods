@@ -44,17 +44,7 @@ const getAverage = (...numbers) => {
     const result = data.reduce((sum, current) => sum + current, 0);
     return result / data.length;
 }
-function getAverage(...numbers) {
-    const data = numbers.filter(num =>Number.isInteger(num));
-    const result = data.reduce((accumulator, element) => {
-        let sum = 0;
-      if (Number.isInteger(element)) {
-          sum +=element;
-      }
-        return sum + accumulator;
-      },0);
-    return result / numbers.length;
-  }
+
   console.log(getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
   
 
